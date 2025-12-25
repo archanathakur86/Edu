@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Learning Management System</title>
+    <meta name="description" content="The connected workspace where better, faster work happens." />
+    <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+    <div id="mainApp">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <div class="logo-icon">🎓</div>
+                        EduLearn
+                    </div>
+                    <nav class="nav">
+                        <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+                        <a href="#" onclick="showPage('courses')">Courses</a>
+                        <a href="#" onclick="showPage('announcements')">Announcements</a>
+                        <a href="#" onclick="showPage('profile')">Profile</a>
+                    </nav>
+                    <div class="user-menu">
+                        <span>Welcome, Archana Thakur</span>
+                        <a href="#" class="btn btn-outline">Login</a>
+                        <a href="#" class="btn btn-outline">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="main-content">
+                <aside class="sidebar">
+                    <h3>📚 Quick Access</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="#" onclick="showPage('dashboard')" class="active">
+                            <span class="menu-icon">📊</span>Dashboard
+                        </a></li>
+                        <li><a href="#" onclick="showPage('courses')">
+                            <span class="menu-icon">📖</span>My Courses
+                        </a></li>
+                        <li><a href="#" onclick="showPage('announcements')">
+                            <span class="menu-icon">📢</span>Announcements
+                        </a></li>
+                        <li><a href="#" onclick="showPage('profile')">
+                            <span class="menu-icon">👤</span>Profile
+                        </a></li>
+                        <li><a href="#" onclick="showPage('assignments')">
+                            <span class="menu-icon">📝</span>Assignments
+                        </a></li>
+                        <li><a href="#" onclick="showPage('grades')">
+                            <span class="menu-icon">🎯</span>Grades
+                        </a></li>
+                    </ul>
+                </aside>
+
+                <main class="content-area">
+
+                    <div id="dashboard" class="page active">
+                        <div class="page-header">
+                            <h1 class="page-title">Dashboard</h1>
+                            <p class="page-subtitle">Welcome back! Here's what's happening with your learning journey.</p>
+                        </div>
+
+                        <div class="dashboard-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Enrolled Courses</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Assignments Due</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Average Grade</div>
+                            </div>
+                        </div>
+
+                        <h2 style="margin-bottom: 20px; color: #2c3e50;">📚 Continue Learning</h2>
+                        <div class="course-grid">
+                            <div class="course-card">
+                                <div class="course-image">💻</div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Web Development Fundamentals</h3>
+                                    <p class="course-description">Learn HTML, CSS, and JavaScript basics</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                    <p style="font-size: 14px; color: #6c757d; margin-bottom: 15px;">Progress: 75%</p>
+                                    <button class="btn-course">Continue Course</button>
+                                </div>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image">🧮</div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Data Science Basics</h3>
+                                    <p class="course-description">Introduction to Python and data analysis</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%;"></div>
+                                    </div>
+                                    <p style="font-size: 14px; color: #6c757d; margin-bottom: 15px;">Progress: 45%</p>
+                                    <button class="btn-course">Continue Course</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="courses" class="page">
+                        <div class="page-header">
+                            <h1 class="page-title">My Courses</h1>
+                            <p class="page-subtitle">Track your progress across all enrolled courses</p>
+                        </div>
+
+                        <div class="course-grid">
+                            <div class="course-card">
+                                <div class="course-image">💻</div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Web Development Fundamentals</h3>
+                                    <p class="course-description">Master the basics of web development with HTML, CSS, and JavaScript</p>
+                                    <div class="course-meta">
+                                        <span class="course-instructor">Dr. Sarah Wilson</span>
+                                        <span class="course-duration">12 weeks</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                    <p style="font-size: 14px; color: #6c757d; margin-bottom: 15px;">Progress: 75% • 9 of 12 modules completed</p>
+                                    <button class="btn-course">Continue Learning</button>
+                                </div>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image">🧮</div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Data Science Fundamentals</h3>
+                                    <p class="course-description">Learn Python programming and data analysis techniques</p>
+                                    <div class="course-meta">
+                                        <span class="course-instructor">Prof. Michael Chen</span>
+                                        <span class="course-duration">16 weeks</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%;"></div>
+                                    </div>
+                                    <p style="font-size: 14px; color: #6c757d; margin-bottom: 15px;">Progress: 45% • 7 of 16 modules completed</p>
+                                    <button class="btn-course">Continue Learning</button>
+                                </div>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image">🎨</div>
+                                <div class="course-content">
+                                    <h3 class="course-title">UI/UX Design Principles</h3>
+                                    <p class="course-description">Create beautiful and user-friendly interfaces</p>
+                                    <div class="course-meta">
+                                        <span class="course-instructor">Lisa Anderson</span>
+                                        <span class="course-duration">8 weeks</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 90%;"></div>
+                                    </div>
+                                    <p style="font-size: 14px; color: #6c757d; margin-bottom: 15px;">Progress: 90% • 7 of 8 modules completed</p>
+                                    <button class="btn-course">Continue Learning</button>
+                                </div>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image">🤖</div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Machine Learning Basics</h3>
+                                    <p class="course-description">Introduction to AI and machine learning algorithms</p>
+                                    <div class="course-meta">
+                                        <span class="course-instructor">Dr. Robert Kim</span>
+                                        <span class="course-duration">14 weeks</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 20%;"></div>
+                                    </div>
+                                    <p style="font-size: 14px; color: #6c757d; margin-bottom: 15px;">Progress: 20% • 3 of 14 modules completed</p>
+                                    <button class="btn-course">Continue Learning</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="announcements" class="page">
+                        <div class="page-header">
+                            <h1 class="page-title">Announcements</h1>
+                            <p class="page-subtitle">Stay updated with the latest news and updates</p>
+                        </div>
+
+                        <div class="announcement-list">
+                            <div class="announcement-item">
+                                <div class="announcement-header">
+                                    <h3 class="announcement-title">📚 New Course Materials Available</h3>
+                                    <span class="announcement-date">2 hours ago</span>
+                                </div>
+                                <p class="announcement-content">
+                                    New supplementary materials have been added to the Web Development Fundamentals course. 
+                                    Check out the latest video tutorials and practice exercises in Module 10.
+                                </p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-header">
+                                    <h3 class="announcement-title">⏰ Assignment Deadline Reminder</h3>
+                                    <span class="announcement-date">1 day ago</span>
+                                </div>
+                                <p class="announcement-content">
+                                    Don't forget! Your Data Science project is due this Friday at 11:59 PM. 
+                                    Make sure to submit your analysis report and Python code files.
+                                </p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-header">
+                                    <h3 class="announcement-title">🎉 Platform Update - New Features</h3>
+                                    <span class="announcement-date">3 days ago</span>
+                                </div>
+                                <p class="announcement-content">
+                                    We've added new features to improve your learning experience! Check out the enhanced 
+                                    progress tracking, discussion forums, and mobile app improvements.
+                                </p>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-header">
+                                    <h3 class="announcement-title">🔧 Scheduled Maintenance</h3>
+                                    <span class="announcement-date">1 week ago</span>
+                                </div>
+                                <p class="announcement-content">
+                                    The learning platform will undergo scheduled maintenance on Sunday, 2:00 AM - 4:00 AM EST. 
+                                    During this time, access may be temporarily limited.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EduLearn. All rights reserved. | Empowering learners worldwide</p>
+        </div>
+    </footer>
+
+    <script>
+      
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            document.getElementById(pageId).classList.add('active');
+            
+            const menuItems = document.querySelectorAll('.sidebar-menu a');
+            menuItems.forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginPage').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
